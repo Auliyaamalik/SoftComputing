@@ -1,0 +1,53 @@
+
+GENETIC ALGORITHM - TSP RUNNING ROUTE SURABAYA HERITAGE
+START/END: Balai Kota
+DISTANCE METRIC: REAL OSRM API (Jalan Aspal Benaran - Bukan Garis Lurus Udara)
+====================================================================================================
+
+HASIL OPTIMASI:
+   Total Distance: 17.903 km (JARAK REAL JALAN ASPAL)
+   Estimated Time (5 km/h): 214.8 menit
+   Improvement dari Initial: 28.2%
+   Initial Distance: 24.930 km
+   Best Distance Found: 17.903 km
+
+ALGORITMA CONFIGURATION:
+   Method: Genetic Algorithm (GA)
+   Population Size: 100 individuals
+   Generations: 200 iterations
+   Mutation Rate: 15%
+   Crossover Method: Order Crossover (OX)
+   Mutation Type: Swap Mutation
+   Elite Preservation: 10 individuals/generation
+   Selection Method: Tournament Selection (size=5)
+   Start Point: FIXED (Balai Kota)
+   Distance Source: OSRM API (Real Road - Jalan Benaran Ada)
+
+OPTIMAL ROUTE (JARAK REAL JALAN ASPAL):
+
+    1. 5. Balai Kota                                      (START & END) -> 1.274 km
+    2. 1. Monumen Kapal Selam                             -> 2.457 km
+    3. 7. Siola                                           -> 0.611 km
+    4. 4. Hotel Majapahit                                 -> 3.547 km
+    5. 10. Gereja Katolik                                 -> 2.603 km
+    6. 6. House of Sampoerna                              -> 0.544 km
+    7. 9. Gedung De Javasche Bank                         -> 0.578 km
+    8. 3. Jembatan Merah                                  -> 1.332 km
+    9. 2. Tugu Pahlawan                                   -> 3.087 km
+   10. 8. Rumah WR Soepratman                             -> 1.870 km
+
+DISTANCE MATRIX SOURCE:
+   Source: OSRM API (Open Source Routing Machine)
+   Route Type: Driving (Real Road - Via Jalan Aspal Benaran)
+   NOT Haversine (Bukan garis lurus udara)
+   Coverage: 10 historic sites at Surabaya
+   Total Entries: 10x10 matrix
+
+FILES GENERATED:
+   - 01_ga_convergence.png - GA Convergence & Improvement Graph
+   - best_route_ga.csv - Best Route Details with Real Distances
+   - distance_matrix_osrm.csv - Distance Matrix (Real Road)
+   - optimal_route_ga.html - Interactive Map (BUKA DI BROWSER!)
+   - ga_summary_report.txt - This summary report
+
+Generated: 2026-04-13 15:43:25

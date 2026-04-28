@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5873134ca54e9e062ddcc65a5d18427f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 15px; left: 60px; width: 480px; height: 200px;
+            background-color: white; border-radius: 8px; z-index: 9999;
+            font-size: 13px; padding: 16px; font-family: Arial;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <b style="color: #202124; font-size: 18px;">🏃 OPTIMAL RUNNING ROUTE</b><br>
+        <span style="color: #5f6368; font-size: 12px;">Genetic Algorithm Optimization</span>
+    </div>
+</div>
+<hr style="margin: 10px 0; border: none; border-top: 1px solid #dadce0;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <div>
+        <span style="color: #5f6368;">📏 JARAK</span><br>
+        <b style="color: #1f2937; font-size: 16px;">17.903 km</b>
+    </div>
+    <div>
+        <span style="color: #5f6368;">⏱️ WAKTU (5 km/h)</span><br>
+        <b style="color: #1f2937; font-size: 16px;">214.8 menit</b>
+    </div>
+</div>
+<hr style="margin: 10px 0; border: none; border-top: 1px solid #dadce0;">
+<div style="font-size: 12px;">
+    <b>Start/End:</b> 5. Balai Kota<br>
+    <b>Total Stops:</b> 10 lokasi<br>
+    <b>Improvement:</b> 26.9%<br>
+    <b>Route:</b> Real Road (OSRM)
+</div>
+</div>
+    
+            <div class="folium-map" id="map_5873134ca54e9e062ddcc65a5d18427f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5873134ca54e9e062ddcc65a5d18427f = L.map(
+                "map_5873134ca54e9e062ddcc65a5d18427f",
+                {
+                    center: [-7.2478452969241145, 112.74123051775776],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "name": "Google Maps",
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cffd79ed0e6cc45976ada999d8a099f4 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cffd79ed0e6cc45976ada999d8a099f4.addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var poly_line_d4e0a853453e1f07ee34900559b00398 = L.polyline(
+                [[-7.258915689406389, 112.74697395344757], [-7.265410059195408, 112.75037011433137], [-7.25595571244258, 112.73746230912607], [-7.259988100047134, 112.73970862774556], [-7.241962063990222, 112.7366016964994], [-7.230636344780059, 112.73436314546284], [-7.23330082321326, 112.73678729077598], [-7.236498244381859, 112.73832001174087], [-7.245342121633903, 112.73790561416419], [-7.250443810150336, 112.75381241428371], [-7.258915689406389, 112.74697395344757]],
+                {"bubblingMouseEvents": true, "color": "#4285F4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4285F4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+        var popup_9cb6d3b3843c066dba50f0ba3f078eea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6195a911db3032785d398c2d3b353f62 = $(`<div id="html_6195a911db3032785d398c2d3b353f62" style="width: 100.0%; height: 100.0%;">Total: 17.903 km</div>`)[0];
+                popup_9cb6d3b3843c066dba50f0ba3f078eea.setContent(html_6195a911db3032785d398c2d3b353f62);
+            
+        
+
+        poly_line_d4e0a853453e1f07ee34900559b00398.bindPopup(popup_9cb6d3b3843c066dba50f0ba3f078eea)
+        ;
+
+        
+    
+    
+            var poly_line_e2c0af8682e5f8233dfa050d25ee54c4 = L.polyline(
+                [[-7.258915689406389, 112.74697395344757], [-7.265410059195408, 112.75037011433137], [-7.25595571244258, 112.73746230912607], [-7.259988100047134, 112.73970862774556], [-7.241962063990222, 112.7366016964994], [-7.230636344780059, 112.73436314546284], [-7.23330082321326, 112.73678729077598], [-7.236498244381859, 112.73832001174087], [-7.245342121633903, 112.73790561416419], [-7.250443810150336, 112.75381241428371], [-7.258915689406389, 112.74697395344757]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_7fb2624aeaf9604b1399e13e4b781926 = L.marker(
+                [-7.258915689406389, 112.74697395344757],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_f171b7947e0679a09d4fecfe84f78309 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1efc710f4f607d3e4ffc94057ccd401 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7399d39bb42d8699744926b050edc3c6 = $(`<div id="html_7399d39bb42d8699744926b050edc3c6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 1</b><br>         <b style="font-size: 13px;">5. Balai Kota</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.258916<br>         Longitude: 112.746974<br>         <b style="color: green;">Jarak ke stop berikutnya: 1.274 km</b><br>         Waktu: 15.3 menit     </div>     </div>`)[0];
+                popup_d1efc710f4f607d3e4ffc94057ccd401.setContent(html_7399d39bb42d8699744926b050edc3c6);
+            
+        
+
+        marker_7fb2624aeaf9604b1399e13e4b781926.bindPopup(popup_d1efc710f4f607d3e4ffc94057ccd401)
+        ;
+
+        
+    
+    
+            marker_7fb2624aeaf9604b1399e13e4b781926.bindTooltip(
+                `<div>
+                     START: 5. Balai Kota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7fb2624aeaf9604b1399e13e4b781926.setIcon(icon_f171b7947e0679a09d4fecfe84f78309);
+            
+    
+            var circle_marker_174f725191c925f9b437f8d69956497d = L.circleMarker(
+                [-7.258915689406389, 112.74697395344757],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_0952a009b341e0cd323aba775c86d12c = L.marker(
+                [-7.265410059195408, 112.75037011433137],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_8f82f4caed9b896584d10b36c7c19a12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b87faa5276852f87cec202b089c164b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7f64e16a2c7a0e8130091a88e6ac539 = $(`<div id="html_e7f64e16a2c7a0e8130091a88e6ac539" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 2</b><br>         <b style="font-size: 13px;">1. Monumen Kapal Selam</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.265410<br>         Longitude: 112.750370<br>         <b style="color: green;">Jarak ke stop berikutnya: 2.457 km</b><br>         Waktu: 29.5 menit     </div>     </div>`)[0];
+                popup_b87faa5276852f87cec202b089c164b3.setContent(html_e7f64e16a2c7a0e8130091a88e6ac539);
+            
+        
+
+        marker_0952a009b341e0cd323aba775c86d12c.bindPopup(popup_b87faa5276852f87cec202b089c164b3)
+        ;
+
+        
+    
+    
+            marker_0952a009b341e0cd323aba775c86d12c.bindTooltip(
+                `<div>
+                     1. Monumen Kapal Selam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0952a009b341e0cd323aba775c86d12c.setIcon(icon_8f82f4caed9b896584d10b36c7c19a12);
+            
+    
+            var circle_marker_44e3ac2f3f5251afe9d5d6551c7316b1 = L.circleMarker(
+                [-7.265410059195408, 112.75037011433137],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_dfd83099c6def5a8a8e5c0c01ee109de = L.marker(
+                [-7.25595571244258, 112.73746230912607],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_c8df2705f45d9716b72abe065328c188 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_782da43eaf0463cf3b3ba149e009f10a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2b222064b689b2b9acac39a3bf2e7c1 = $(`<div id="html_c2b222064b689b2b9acac39a3bf2e7c1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 3</b><br>         <b style="font-size: 13px;">7. Siola</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.255956<br>         Longitude: 112.737462<br>         <b style="color: green;">Jarak ke stop berikutnya: 0.611 km</b><br>         Waktu: 7.3 menit     </div>     </div>`)[0];
+                popup_782da43eaf0463cf3b3ba149e009f10a.setContent(html_c2b222064b689b2b9acac39a3bf2e7c1);
+            
+        
+
+        marker_dfd83099c6def5a8a8e5c0c01ee109de.bindPopup(popup_782da43eaf0463cf3b3ba149e009f10a)
+        ;
+
+        
+    
+    
+            marker_dfd83099c6def5a8a8e5c0c01ee109de.bindTooltip(
+                `<div>
+                     7. Siola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dfd83099c6def5a8a8e5c0c01ee109de.setIcon(icon_c8df2705f45d9716b72abe065328c188);
+            
+    
+            var circle_marker_b7ff9990d9700a20a8adb3ae011bf356 = L.circleMarker(
+                [-7.25595571244258, 112.73746230912607],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_325f80931f205e857e8de2073a9fef3d = L.marker(
+                [-7.259988100047134, 112.73970862774556],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_b1db6dd6d7fa5bdcf6115eacf299a81d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33b9e8d68cba6650c7755358e18847ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b4103504a9f096909b982ffd2c6639e0 = $(`<div id="html_b4103504a9f096909b982ffd2c6639e0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 4</b><br>         <b style="font-size: 13px;">4. Hotel Majapahit</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.259988<br>         Longitude: 112.739709<br>         <b style="color: green;">Jarak ke stop berikutnya: 3.547 km</b><br>         Waktu: 42.6 menit     </div>     </div>`)[0];
+                popup_33b9e8d68cba6650c7755358e18847ac.setContent(html_b4103504a9f096909b982ffd2c6639e0);
+            
+        
+
+        marker_325f80931f205e857e8de2073a9fef3d.bindPopup(popup_33b9e8d68cba6650c7755358e18847ac)
+        ;
+
+        
+    
+    
+            marker_325f80931f205e857e8de2073a9fef3d.bindTooltip(
+                `<div>
+                     4. Hotel Majapahit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_325f80931f205e857e8de2073a9fef3d.setIcon(icon_b1db6dd6d7fa5bdcf6115eacf299a81d);
+            
+    
+            var circle_marker_53555403770c11328af0180a961b22a6 = L.circleMarker(
+                [-7.259988100047134, 112.73970862774556],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_201af9e6d4fc358fd2451ab50f71b707 = L.marker(
+                [-7.241962063990222, 112.7366016964994],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_f2b11ee1446ab267ed0ea093cbd185d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68bc581226f0ec33e9c4de99fa98ab92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_87e20a6205dae01f230033e11f1be6b9 = $(`<div id="html_87e20a6205dae01f230033e11f1be6b9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 5</b><br>         <b style="font-size: 13px;">10. Gereja Katolik</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.241962<br>         Longitude: 112.736602<br>         <b style="color: green;">Jarak ke stop berikutnya: 2.603 km</b><br>         Waktu: 31.2 menit     </div>     </div>`)[0];
+                popup_68bc581226f0ec33e9c4de99fa98ab92.setContent(html_87e20a6205dae01f230033e11f1be6b9);
+            
+        
+
+        marker_201af9e6d4fc358fd2451ab50f71b707.bindPopup(popup_68bc581226f0ec33e9c4de99fa98ab92)
+        ;
+
+        
+    
+    
+            marker_201af9e6d4fc358fd2451ab50f71b707.bindTooltip(
+                `<div>
+                     10. Gereja Katolik
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_201af9e6d4fc358fd2451ab50f71b707.setIcon(icon_f2b11ee1446ab267ed0ea093cbd185d5);
+            
+    
+            var circle_marker_e3bb902d3295f68fdbe63e539fedd8ef = L.circleMarker(
+                [-7.241962063990222, 112.7366016964994],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_85ac1a986f6cd7954fe45fb7ced87cbd = L.marker(
+                [-7.230636344780059, 112.73436314546284],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_99a0ff64fa37e01b7aed9d50ddc103b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ac4948a28b2dbde9f13571e82b8a034 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9655048157741a748a248bf5091bd95 = $(`<div id="html_d9655048157741a748a248bf5091bd95" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 6</b><br>         <b style="font-size: 13px;">6. House of Sampoerna</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.230636<br>         Longitude: 112.734363<br>         <b style="color: green;">Jarak ke stop berikutnya: 0.544 km</b><br>         Waktu: 6.5 menit     </div>     </div>`)[0];
+                popup_8ac4948a28b2dbde9f13571e82b8a034.setContent(html_d9655048157741a748a248bf5091bd95);
+            
+        
+
+        marker_85ac1a986f6cd7954fe45fb7ced87cbd.bindPopup(popup_8ac4948a28b2dbde9f13571e82b8a034)
+        ;
+
+        
+    
+    
+            marker_85ac1a986f6cd7954fe45fb7ced87cbd.bindTooltip(
+                `<div>
+                     6. House of Sampoerna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_85ac1a986f6cd7954fe45fb7ced87cbd.setIcon(icon_99a0ff64fa37e01b7aed9d50ddc103b1);
+            
+    
+            var circle_marker_cccd58ddc1fcc817b2e12f5edc10ec2a = L.circleMarker(
+                [-7.230636344780059, 112.73436314546284],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_6076c4d6ea2aaa30f90a91d427699106 = L.marker(
+                [-7.23330082321326, 112.73678729077598],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_30002dc31a84f6ee399bfffca3cd2675 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4868563ff130216823989fcd4d4df291 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93817f3289e9667c0eb26510e90cac9d = $(`<div id="html_93817f3289e9667c0eb26510e90cac9d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 7</b><br>         <b style="font-size: 13px;">9. Gedung De Javasche Bank</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.233301<br>         Longitude: 112.736787<br>         <b style="color: green;">Jarak ke stop berikutnya: 0.578 km</b><br>         Waktu: 6.9 menit     </div>     </div>`)[0];
+                popup_4868563ff130216823989fcd4d4df291.setContent(html_93817f3289e9667c0eb26510e90cac9d);
+            
+        
+
+        marker_6076c4d6ea2aaa30f90a91d427699106.bindPopup(popup_4868563ff130216823989fcd4d4df291)
+        ;
+
+        
+    
+    
+            marker_6076c4d6ea2aaa30f90a91d427699106.bindTooltip(
+                `<div>
+                     9. Gedung De Javasche Bank
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6076c4d6ea2aaa30f90a91d427699106.setIcon(icon_30002dc31a84f6ee399bfffca3cd2675);
+            
+    
+            var circle_marker_aa0989a572b2fddb6ac4b0491a813865 = L.circleMarker(
+                [-7.23330082321326, 112.73678729077598],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_7b60a5da90c90af48b4b7fbceda5c7b5 = L.marker(
+                [-7.236498244381859, 112.73832001174087],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_de15b620f32fef807e311d34ea72d06d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40e876900a2a6297a6788642596b089a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f220034899737283ef75db9c652a12b5 = $(`<div id="html_f220034899737283ef75db9c652a12b5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 8</b><br>         <b style="font-size: 13px;">3. Jembatan Merah</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.236498<br>         Longitude: 112.738320<br>         <b style="color: green;">Jarak ke stop berikutnya: 1.332 km</b><br>         Waktu: 16.0 menit     </div>     </div>`)[0];
+                popup_40e876900a2a6297a6788642596b089a.setContent(html_f220034899737283ef75db9c652a12b5);
+            
+        
+
+        marker_7b60a5da90c90af48b4b7fbceda5c7b5.bindPopup(popup_40e876900a2a6297a6788642596b089a)
+        ;
+
+        
+    
+    
+            marker_7b60a5da90c90af48b4b7fbceda5c7b5.bindTooltip(
+                `<div>
+                     3. Jembatan Merah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b60a5da90c90af48b4b7fbceda5c7b5.setIcon(icon_de15b620f32fef807e311d34ea72d06d);
+            
+    
+            var circle_marker_405fa1a08dc93ae784af96ce9ccdf5f6 = L.circleMarker(
+                [-7.236498244381859, 112.73832001174087],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkpurple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_3267e91baca8cd4f47c45ead12d694d6 = L.marker(
+                [-7.245342121633903, 112.73790561416419],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_60a3872a6b7ba747a3a41d5f06059088 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d02b6e6dcbe9418046e1fa1e6256931 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f237bc96e544314ff5d75aaf6620674 = $(`<div id="html_6f237bc96e544314ff5d75aaf6620674" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 9</b><br>         <b style="font-size: 13px;">2. Tugu Pahlawan</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.245342<br>         Longitude: 112.737906<br>         <b style="color: green;">Jarak ke stop berikutnya: 3.087 km</b><br>         Waktu: 37.0 menit     </div>     </div>`)[0];
+                popup_1d02b6e6dcbe9418046e1fa1e6256931.setContent(html_6f237bc96e544314ff5d75aaf6620674);
+            
+        
+
+        marker_3267e91baca8cd4f47c45ead12d694d6.bindPopup(popup_1d02b6e6dcbe9418046e1fa1e6256931)
+        ;
+
+        
+    
+    
+            marker_3267e91baca8cd4f47c45ead12d694d6.bindTooltip(
+                `<div>
+                     2. Tugu Pahlawan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3267e91baca8cd4f47c45ead12d694d6.setIcon(icon_60a3872a6b7ba747a3a41d5f06059088);
+            
+    
+            var circle_marker_a453bd69be7bda48b08aef3024d51196 = L.circleMarker(
+                [-7.245342121633903, 112.73790561416419],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var marker_7120bf055a1c3742c76f990dfe8cd704 = L.marker(
+                [-7.250443810150336, 112.75381241428371],
+                {
+}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+    
+            var icon_948366f18c216274aa5c2ee6bbc2e0dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aa335ddfa3c6369cbd40412c4423a11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85d75309e47d165b5a0ca217a0524627 = $(`<div id="html_85d75309e47d165b5a0ca217a0524627" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 250px;">         <b style="color: #4285F4; font-size: 14px;">Stop 10</b><br>         <b style="font-size: 13px;">8. Rumah WR Soepratman</b><br>         <hr style="margin: 5px 0;">         Latitude: -7.250444<br>         Longitude: 112.753812<br>         <b style="color: green;">Jarak ke stop berikutnya: 1.870 km</b><br>         Waktu: 22.4 menit     </div>     </div>`)[0];
+                popup_9aa335ddfa3c6369cbd40412c4423a11.setContent(html_85d75309e47d165b5a0ca217a0524627);
+            
+        
+
+        marker_7120bf055a1c3742c76f990dfe8cd704.bindPopup(popup_9aa335ddfa3c6369cbd40412c4423a11)
+        ;
+
+        
+    
+    
+            marker_7120bf055a1c3742c76f990dfe8cd704.bindTooltip(
+                `<div>
+                     END: 8. Rumah WR Soepratman
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7120bf055a1c3742c76f990dfe8cd704.setIcon(icon_948366f18c216274aa5c2ee6bbc2e0dd);
+            
+    
+            var circle_marker_a01ca5c1d64d88bec5f6801c8d347299 = L.circleMarker(
+                [-7.250443810150336, 112.75381241428371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_5873134ca54e9e062ddcc65a5d18427f);
+        
+</script>
+</html>
