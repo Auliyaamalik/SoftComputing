@@ -1,0 +1,54 @@
+DOKUMENTASI PARAMETERISASI DATA INDEKS JALAN REAL-TIME OPENSTREETMAP
+====================================================================
+
+ No                        Nama Objek Wisata Wilayah Kota  Latitude  Longitude  Skor_Live_OSM_Base  Skor_Live_OSM_Max_Sempit
+  1                    1. Alun-Alun Surabaya        Pusat -7.263590 112.745317                2.00                      3.00
+  2                       2. Jalan Tunjungan        Pusat -7.259350 112.738873                2.00                      3.00
+  3                       3. Hotel Majapahit        Pusat -7.260158 112.739698                2.00                      3.00
+  4                 4. Gedung Negara Grahadi        Pusat -7.262953 112.743378                2.00                      3.00
+  5                 5. Monumen Bambu Runcing        Pusat -7.267778 112.744399                2.00                      3.00
+  6                          6. Taman Apsari        Pusat -7.264617 112.742802                2.00                      3.00
+  7                   7. Monumen Kapal Selam        Pusat -7.265591 112.750327                2.00                      3.00
+  8                        8. Plaza Surabaya        Pusat -7.264877 112.748545                2.00                      3.00
+  9                        9. Taman Prestasi        Pusat -7.259885 112.745484                2.00                      3.00
+ 10                         10. Gedung Siola        Pusat -7.256157 112.736453                2.00                      3.00
+ 11                        11. Pasar Blauran        Pusat -7.255906 112.733742                2.00                      3.00
+ 12                  12. Jalan Basuki Rahmat        Pusat -7.265324 112.740889                2.00                      3.00
+ 13                13. Monumen Tugu Pahlawan        Pusat -7.245814 112.737784                2.00                      3.00
+ 14                     14. Jalan Kedungdoro        Pusat -7.258500 112.729500                2.00                      3.00
+ 15                       15. Taman Ekspresi        Pusat -7.254100 112.746200                2.00                      3.00
+ 16              16. Jalan Raya Darmo Permai        Barat -7.284100 112.691200                2.75                      3.75
+ 17                   17. Graha Famili Timur        Barat -7.289540 112.684025                2.75                      3.75
+ 18            18. Spazio Jalan Yono Soewoyo        Barat -7.287814 112.680520                2.75                      3.75
+ 19                   19. Plaza Segi Delapan        Barat -7.284241 112.682142                2.75                      3.75
+ 20                    20. Jalan HR Muhammad        Barat -7.284800 112.695500                2.75                      3.75
+ 21              21. Taman Pradah Kalikendal        Barat -7.287500 112.689000                2.75                      3.75
+ 22                22. Kawasan Sukomanunggal        Barat -7.262000 112.701000                2.75                      3.75
+ 23              23. Jalan Raya Kupang Indah        Barat -7.289100 112.705000                2.75                      3.75
+ 24 24. Taman Makam Pahlawan Mayjen Sungkono        Barat -7.291500 112.712000                2.75                      3.75
+ 25               25. Ciputra World Surabaya        Barat -7.291200 112.723000                2.75                      3.75
+ 26                       26. Kampus B Unair        Timur -7.268100 112.758200                2.30                      3.30
+ 27                   27. Jalan Dharmahusada        Timur -7.269000 112.765000                2.30                      3.30
+ 28                           28. Taman Mojo        Timur -7.272500 112.768000                2.30                      3.30
+ 29               29. Jalan Manyar Kertoarjo        Timur -7.275800 112.766000                2.30                      3.30
+ 30            30. Kampus A Unair Kedokteran        Timur -7.266200 112.753000                2.30                      3.30
+ 31                31. Jalan Kertajaya Indah        Timur -7.276200 112.775000                2.30                      3.30
+ 32                  32. Taman Flora Bratang        Timur -7.296214 112.760540                2.30                      3.30
+ 33            33. Taman Kebun Bibit Bratang        Timur -7.295840 112.759215                2.30                      3.30
+ 34                   34. Jalan Karang Menur        Timur -7.271000 112.761000                2.30                      3.30
+ 35              35. Kawasan Menur Pumpungan        Timur -7.286000 112.772000                2.30                      3.30
+ 36              36. Jembatan Merah Surabaya        Utara -7.234812 112.738145                3.80                      4.80
+ 37                37. Kya-Kya Kembang Jepun        Utara -7.236112 112.741215                3.80                      4.80
+ 38                   38. House of Sampoerna        Utara -7.230815 112.734215                3.80                      4.80
+ 39        39. Stasiun Surabaya Kota (Semut)        Utara -7.238500 112.743200                3.80                      4.80
+ 40                   40. Kawasan Ampel Suci        Utara -7.231200 112.742500                3.80                      4.80
+ 41                     41. Taman Jayengrono        Utara -7.235500 112.737500                3.80                      4.80
+ 42                       42. Jalan Rajawali        Utara -7.234500 112.731000                3.80                      4.80
+ 43                        43. Gedung Cerutu        Utara -7.235100 112.736800                3.80                      4.80
+ 44            44. Jalan Kembang Jepun Timur        Utara -7.237200 112.746000                3.80                      4.80
+ 45                      45. Kawasan Kapasan        Utara -7.241500 112.748000                3.80                      4.80
+ 46                        46. Taman Bungkul      Selatan -7.291340 112.739815                2.00                      3.00
+ 47               47. Jalan Raya Darmo (CFD)      Selatan -7.285520 112.741530                2.00                      3.00
+ 48              48. Kebun Binatang Surabaya      Selatan -7.296530 112.736540                2.00                      3.00
+ 49                 49. Patung Suro dan Boyo      Selatan -7.295215 112.737214                2.00                      3.00
+ 50       50. Kawasan Kampus Ketintang Unesa      Selatan -7.314215 112.726530                2.00                      3.00

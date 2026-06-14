@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d36801aaca51457a99e8409a63c5e367 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d36801aaca51457a99e8409a63c5e367" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d36801aaca51457a99e8409a63c5e367 = L.map(
+                "map_d36801aaca51457a99e8409a63c5e367",
+                {
+                    center: [-7.262015, 112.739727],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_239efe5458cb4b72feb825786d7aa199 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_239efe5458cb4b72feb825786d7aa199.addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            var marker_e6d7b671e2b9de62ab20b1857f58c8b2 = L.marker(
+                [-7.262015, 112.739727],
+                {
+}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            var icon_3642b121398cc15869b229571185c2b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e6d7b671e2b9de62ab20b1857f58c8b2.bindTooltip(
+                `<div>
+                     Hotel Sheraton (Depot)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6d7b671e2b9de62ab20b1857f58c8b2.setIcon(icon_3642b121398cc15869b229571185c2b2);
+            
+    
+            var poly_line_4298bd7fe9a6ab20bca32a45daa2b57c = L.polyline(
+                [[-7.262015, 112.739727], [-7.295215, 112.737214], [-7.29134, 112.739815], [-7.286, 112.772], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_4298bd7fe9a6ab20bca32a45daa2b57c.bindTooltip(
+                `<div>
+                     Trip 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_259afafdd39a08b33ece4928a8f095ee = L.circleMarker(
+                [-7.295215, 112.737214],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_259afafdd39a08b33ece4928a8f095ee.bindTooltip(
+                `<div>
+                     [Trip 1] Patung Suro dan Boyo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8c682de54b54259e543a15e912add1d = L.circleMarker(
+                [-7.29134, 112.739815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_a8c682de54b54259e543a15e912add1d.bindTooltip(
+                `<div>
+                     [Trip 1] Taman Bungkul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd4b3c26ac307010b69a1de2db1f3d75 = L.circleMarker(
+                [-7.286, 112.772],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_fd4b3c26ac307010b69a1de2db1f3d75.bindTooltip(
+                `<div>
+                     [Trip 1] Kawasan Menur Pumpungan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_86f0473d6b19ad6ad092f2bc651039d1 = L.polyline(
+                [[-7.262015, 112.739727], [-7.287814, 112.68052], [-7.262, 112.701], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_86f0473d6b19ad6ad092f2bc651039d1.bindTooltip(
+                `<div>
+                     Trip 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39f73528435a2f0e6064e491b55db4c9 = L.circleMarker(
+                [-7.287814, 112.68052],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_39f73528435a2f0e6064e491b55db4c9.bindTooltip(
+                `<div>
+                     [Trip 2] Spazio Jalan Yono Soewoyo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7e08925313f3d9edcc872d64f66a6ae = L.circleMarker(
+                [-7.262, 112.701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_f7e08925313f3d9edcc872d64f66a6ae.bindTooltip(
+                `<div>
+                     [Trip 2] Kawasan Sukomanunggal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2f02928de42761c0b6f791daed795dc7 = L.polyline(
+                [[-7.262015, 112.739727], [-7.2758, 112.766], [-7.2725, 112.768], [-7.2681, 112.7582], [-7.2312, 112.7425], [-7.234812, 112.738145], [-7.2372, 112.746], [-7.245814, 112.737784], [-7.260158, 112.739698], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_2f02928de42761c0b6f791daed795dc7.bindTooltip(
+                `<div>
+                     Trip 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e322f81f61323e51ba4afc53613e5a0 = L.circleMarker(
+                [-7.2758, 112.766],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_7e322f81f61323e51ba4afc53613e5a0.bindTooltip(
+                `<div>
+                     [Trip 3] Jalan Manyar Kertoarjo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d60470e179ce1199666ccde718bd9bb0 = L.circleMarker(
+                [-7.2725, 112.768],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_d60470e179ce1199666ccde718bd9bb0.bindTooltip(
+                `<div>
+                     [Trip 3] Taman Mojo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80cbb470220382d2e36ba4226b8a034c = L.circleMarker(
+                [-7.2681, 112.7582],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_80cbb470220382d2e36ba4226b8a034c.bindTooltip(
+                `<div>
+                     [Trip 3] Kampus B Unair
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4582bb945d6b6692f74e60288c67d3c1 = L.circleMarker(
+                [-7.2312, 112.7425],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_4582bb945d6b6692f74e60288c67d3c1.bindTooltip(
+                `<div>
+                     [Trip 3] Kawasan Ampel Suci
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7ec3155bd40ddbed428b56931627ad0 = L.circleMarker(
+                [-7.234812, 112.738145],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_c7ec3155bd40ddbed428b56931627ad0.bindTooltip(
+                `<div>
+                     [Trip 3] Jembatan Merah Surabaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_242ddb2f161bc45883f4a0108a645cbf = L.circleMarker(
+                [-7.2372, 112.746],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_242ddb2f161bc45883f4a0108a645cbf.bindTooltip(
+                `<div>
+                     [Trip 3] Jalan Kembang Jepun Timur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2204fd1d6f2c446f395278e9efdf8b52 = L.circleMarker(
+                [-7.245814, 112.737784],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_2204fd1d6f2c446f395278e9efdf8b52.bindTooltip(
+                `<div>
+                     [Trip 3] Monumen Tugu Pahlawan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b688232166f941a6e5697b81f2003559 = L.circleMarker(
+                [-7.260158, 112.739698],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_b688232166f941a6e5697b81f2003559.bindTooltip(
+                `<div>
+                     [Trip 3] Hotel Majapahit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_469bbde2bd8c9c2ba665fcc9442bc6b6 = L.polyline(
+                [[-7.262015, 112.739727], [-7.2662, 112.753], [-7.2415, 112.748], [-7.2345, 112.731], [-7.2351, 112.7368], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_469bbde2bd8c9c2ba665fcc9442bc6b6.bindTooltip(
+                `<div>
+                     Trip 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_624bcac71d3a91f1ffc4b47cea4b19f9 = L.circleMarker(
+                [-7.2662, 112.753],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_624bcac71d3a91f1ffc4b47cea4b19f9.bindTooltip(
+                `<div>
+                     [Trip 4] Kampus A Unair Kedokteran
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe1897f972e209aff49ded33cc2e72cd = L.circleMarker(
+                [-7.2415, 112.748],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_fe1897f972e209aff49ded33cc2e72cd.bindTooltip(
+                `<div>
+                     [Trip 4] Kawasan Kapasan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_170aa6d94f70f6a83bbf98b36aba73ab = L.circleMarker(
+                [-7.2345, 112.731],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_170aa6d94f70f6a83bbf98b36aba73ab.bindTooltip(
+                `<div>
+                     [Trip 4] Jalan Rajawali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a758343e52c7863b06b8e3ef7f854d6 = L.circleMarker(
+                [-7.2351, 112.7368],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_3a758343e52c7863b06b8e3ef7f854d6.bindTooltip(
+                `<div>
+                     [Trip 4] Gedung Cerutu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cec9b7004824b1fe03d02b83ec93a281 = L.polyline(
+                [[-7.262015, 112.739727], [-7.314215, 112.72653], [-7.29653, 112.73654], [-7.28552, 112.74153], [-7.296214, 112.76054], [-7.271, 112.761], [-7.284241, 112.682142], [-7.2891, 112.705], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_cec9b7004824b1fe03d02b83ec93a281.bindTooltip(
+                `<div>
+                     Trip 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f72b0784c9a1b375aafb0634b693b862 = L.circleMarker(
+                [-7.314215, 112.72653],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_f72b0784c9a1b375aafb0634b693b862.bindTooltip(
+                `<div>
+                     [Trip 5] Kawasan Kampus Ketintang Unesa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5d7fd190d9168f0d77af2d08e8c4727 = L.circleMarker(
+                [-7.29653, 112.73654],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_c5d7fd190d9168f0d77af2d08e8c4727.bindTooltip(
+                `<div>
+                     [Trip 5] Kebun Binatang Surabaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c87956193751b990dbc4cb94ceb8982 = L.circleMarker(
+                [-7.28552, 112.74153],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_5c87956193751b990dbc4cb94ceb8982.bindTooltip(
+                `<div>
+                     [Trip 5] Jalan Raya Darmo (CFD)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58339bc0e4c7365b67523e77d7f3080b = L.circleMarker(
+                [-7.296214, 112.76054],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_58339bc0e4c7365b67523e77d7f3080b.bindTooltip(
+                `<div>
+                     [Trip 5] Taman Flora Bratang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc0d2d3072b81c323cdf22aae0f8a00a = L.circleMarker(
+                [-7.271, 112.761],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_bc0d2d3072b81c323cdf22aae0f8a00a.bindTooltip(
+                `<div>
+                     [Trip 5] Jalan Karang Menur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cbe34e1adbcbbe97ff309aab0e9091d = L.circleMarker(
+                [-7.284241, 112.682142],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_2cbe34e1adbcbbe97ff309aab0e9091d.bindTooltip(
+                `<div>
+                     [Trip 5] Plaza Segi Delapan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca7bfcfb95ff49d187e2b320a9dfaff6 = L.circleMarker(
+                [-7.2891, 112.705],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_ca7bfcfb95ff49d187e2b320a9dfaff6.bindTooltip(
+                `<div>
+                     [Trip 5] Jalan Raya Kupang Indah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_32ac022ebb3d74dd7040f87e6a9f50cc = L.polyline(
+                [[-7.262015, 112.739727], [-7.2912, 112.723], [-7.256157, 112.736453], [-7.255906, 112.733742], [-7.2585, 112.7295], [-7.265324, 112.740889], [-7.25935, 112.738873], [-7.262953, 112.743378], [-7.2385, 112.7432], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_32ac022ebb3d74dd7040f87e6a9f50cc.bindTooltip(
+                `<div>
+                     Trip 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_894e09a04b9214a877086d109fb67b5f = L.circleMarker(
+                [-7.2912, 112.723],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_894e09a04b9214a877086d109fb67b5f.bindTooltip(
+                `<div>
+                     [Trip 6] Ciputra World Surabaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab8e91e121c47230918065e8d6f17332 = L.circleMarker(
+                [-7.256157, 112.736453],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_ab8e91e121c47230918065e8d6f17332.bindTooltip(
+                `<div>
+                     [Trip 6] Gedung Siola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b7504868e6a37d874fb1fcfe121b6cf = L.circleMarker(
+                [-7.255906, 112.733742],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_4b7504868e6a37d874fb1fcfe121b6cf.bindTooltip(
+                `<div>
+                     [Trip 6] Pasar Blauran
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd0cf5c7fc8b99fbd43980330e1841c8 = L.circleMarker(
+                [-7.2585, 112.7295],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_bd0cf5c7fc8b99fbd43980330e1841c8.bindTooltip(
+                `<div>
+                     [Trip 6] Jalan Kedungdoro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14a422f94f6e5e2804395a4a1002e4c9 = L.circleMarker(
+                [-7.265324, 112.740889],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_14a422f94f6e5e2804395a4a1002e4c9.bindTooltip(
+                `<div>
+                     [Trip 6] Jalan Basuki Rahmat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4fbb66613b1bf33ac8a74ddcfe254ee5 = L.circleMarker(
+                [-7.25935, 112.738873],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_4fbb66613b1bf33ac8a74ddcfe254ee5.bindTooltip(
+                `<div>
+                     [Trip 6] Jalan Tunjungan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bafbc1be3fb2228fd8a7fef92d1773c4 = L.circleMarker(
+                [-7.262953, 112.743378],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_bafbc1be3fb2228fd8a7fef92d1773c4.bindTooltip(
+                `<div>
+                     [Trip 6] Gedung Negara Grahadi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d473b13c7465d2c78dc57c7f8123347 = L.circleMarker(
+                [-7.2385, 112.7432],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_8d473b13c7465d2c78dc57c7f8123347.bindTooltip(
+                `<div>
+                     [Trip 6] Stasiun Surabaya Kota (Semut)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5be4f52375d1ec0a328cbceeb82e5deb = L.polyline(
+                [[-7.262015, 112.739727], [-7.230815, 112.734215], [-7.2355, 112.7375], [-7.236112, 112.741215], [-7.2541, 112.7462], [-7.264877, 112.748545], [-7.26359, 112.745317], [-7.259885, 112.745484], [-7.264617, 112.742802], [-7.2915, 112.712], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_5be4f52375d1ec0a328cbceeb82e5deb.bindTooltip(
+                `<div>
+                     Trip 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ebc2787a3709edc756a8d9c585de3d0e = L.circleMarker(
+                [-7.230815, 112.734215],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_ebc2787a3709edc756a8d9c585de3d0e.bindTooltip(
+                `<div>
+                     [Trip 7] House of Sampoerna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c235c6b27ca8649985317eccc0f9da7a = L.circleMarker(
+                [-7.2355, 112.7375],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_c235c6b27ca8649985317eccc0f9da7a.bindTooltip(
+                `<div>
+                     [Trip 7] Taman Jayengrono
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcae698b9d7cba37036934f7394490a8 = L.circleMarker(
+                [-7.236112, 112.741215],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_fcae698b9d7cba37036934f7394490a8.bindTooltip(
+                `<div>
+                     [Trip 7] Kya-Kya Kembang Jepun
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cabdc83872f7ccbf9c8f52491d75bdd2 = L.circleMarker(
+                [-7.2541, 112.7462],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_cabdc83872f7ccbf9c8f52491d75bdd2.bindTooltip(
+                `<div>
+                     [Trip 7] Taman Ekspresi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9bc35edeada83703ed940a0317883844 = L.circleMarker(
+                [-7.264877, 112.748545],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_9bc35edeada83703ed940a0317883844.bindTooltip(
+                `<div>
+                     [Trip 7] Plaza Surabaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffedacd0e21b20e00eb571b35c7d8e28 = L.circleMarker(
+                [-7.26359, 112.745317],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_ffedacd0e21b20e00eb571b35c7d8e28.bindTooltip(
+                `<div>
+                     [Trip 7] Alun-Alun Surabaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f78dba05f8f383e4c5daf095f7f92c8 = L.circleMarker(
+                [-7.259885, 112.745484],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_9f78dba05f8f383e4c5daf095f7f92c8.bindTooltip(
+                `<div>
+                     [Trip 7] Taman Prestasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a5084e22165a8745bbab7fd3de6b69a = L.circleMarker(
+                [-7.264617, 112.742802],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_9a5084e22165a8745bbab7fd3de6b69a.bindTooltip(
+                `<div>
+                     [Trip 7] Taman Apsari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3afc32ef0798a0c5f2d12aa59705bb5 = L.circleMarker(
+                [-7.2915, 112.712],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_e3afc32ef0798a0c5f2d12aa59705bb5.bindTooltip(
+                `<div>
+                     [Trip 7] Taman Makam Pahlawan Mayjen Sungkono
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9291a41c8f7749007cb00d7144716784 = L.polyline(
+                [[-7.262015, 112.739727], [-7.2848, 112.6955], [-7.2841, 112.6912], [-7.28954, 112.684025], [-7.2875, 112.689], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_9291a41c8f7749007cb00d7144716784.bindTooltip(
+                `<div>
+                     Trip 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2fe2c8d8cc7a9ec1ae3b6f80b025ad7f = L.circleMarker(
+                [-7.2848, 112.6955],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_2fe2c8d8cc7a9ec1ae3b6f80b025ad7f.bindTooltip(
+                `<div>
+                     [Trip 8] Jalan HR Muhammad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b71675a5b81b68a29c2c7935f7e4446c = L.circleMarker(
+                [-7.2841, 112.6912],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_b71675a5b81b68a29c2c7935f7e4446c.bindTooltip(
+                `<div>
+                     [Trip 8] Jalan Raya Darmo Permai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb845f54a1ee613f0dba01319fd88fed = L.circleMarker(
+                [-7.28954, 112.684025],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_eb845f54a1ee613f0dba01319fd88fed.bindTooltip(
+                `<div>
+                     [Trip 8] Graha Famili Timur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e9fa17ebaa7a03f1159bc8c5e290d27 = L.circleMarker(
+                [-7.2875, 112.689],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_1e9fa17ebaa7a03f1159bc8c5e290d27.bindTooltip(
+                `<div>
+                     [Trip 8] Taman Pradah Kalikendal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_32fe2daa513c3ec4fb1e56cd8c1f0a57 = L.polyline(
+                [[-7.262015, 112.739727], [-7.269, 112.765], [-7.2762, 112.775], [-7.29584, 112.759215], [-7.267778, 112.744399], [-7.265591, 112.750327], [-7.262015, 112.739727]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            poly_line_32fe2daa513c3ec4fb1e56cd8c1f0a57.bindTooltip(
+                `<div>
+                     Trip 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20631eae5d5e88b6c478675dbdcaa349 = L.circleMarker(
+                [-7.269, 112.765],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_20631eae5d5e88b6c478675dbdcaa349.bindTooltip(
+                `<div>
+                     [Trip 9] Jalan Dharmahusada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10fcef636da4bffe1c6f8cb5721117d4 = L.circleMarker(
+                [-7.2762, 112.775],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_10fcef636da4bffe1c6f8cb5721117d4.bindTooltip(
+                `<div>
+                     [Trip 9] Jalan Kertajaya Indah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f2b233e1d8fcde8defe934a33cf8555 = L.circleMarker(
+                [-7.29584, 112.759215],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_5f2b233e1d8fcde8defe934a33cf8555.bindTooltip(
+                `<div>
+                     [Trip 9] Taman Kebun Bibit Bratang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80991b560561087a6587e7309251ef5b = L.circleMarker(
+                [-7.267778, 112.744399],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_80991b560561087a6587e7309251ef5b.bindTooltip(
+                `<div>
+                     [Trip 9] Monumen Bambu Runcing
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51460aa4dbadf749a1417ac8ea9d6e8d = L.circleMarker(
+                [-7.265591, 112.750327],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d36801aaca51457a99e8409a63c5e367);
+        
+    
+            circle_marker_51460aa4dbadf749a1417ac8ea9d6e8d.bindTooltip(
+                `<div>
+                     [Trip 9] Monumen Kapal Selam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

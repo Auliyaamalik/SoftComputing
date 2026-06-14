@@ -1,0 +1,8 @@
+Hari,Jarak (Km),Fatigue Index,Skor Jalan,P_Jarak,P_Fatigue,P_Cluster
+Trip 1 (Sabtu (Jalan Berat)),14.84,1.24,26.1,0.0,2.48,0.0
+Trip 2 (Minggu (Recovery)),19.55,2.17,11.2,0.0,32.5,0.0
+Trip 3 (Sabtu (Jalan Berat)),22.17,1.76,20.5,10.83,3.51,100.0
+Trip 4 (Minggu (Recovery)),16.67,0.71,27.9,0.0,10.62,0.0
+Trip 5 (Sabtu (Jalan Berat)),18.99,1.7,13.75,0.0,3.4,0.0
+Trip 6 (Minggu (Recovery)),19.77,1.04,12.3,0.0,15.53,0.0
+Trip 7 (Sabtu (Jalan Berat)),18.43,1.62,21.5,0.0,3.23,50.0

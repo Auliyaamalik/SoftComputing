@@ -1,0 +1,5 @@
+Hari/Trip,Jarak (Km),Fatigue Index,Skor Jalan OSMnx,P_Fatigue,P_Cluster
+Pekan 1 - Sabtu (Jalan Berat),25.76,737.13,62.03,1105.69,0.0
+Pekan 1 - Minggu (Recovery),25.48,406.56,38.2,3252.51,100.0
+Pekan 2 - Sabtu (Jalan Berat),25.7,7833.11,30.08,11749.66,50.0
+Pekan 2 - Minggu (Recovery),18.63,628.91,13.44,5031.31,0.0
